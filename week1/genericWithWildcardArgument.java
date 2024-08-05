@@ -21,3 +21,15 @@ class Student<T extends Number> {
         return false;
     }
 }
+
+class genericWithWildcardArgument {
+    public static void main(String[] args) {
+
+        Double arr[] = { 1.0, 2.0, 3.0, 4.0, 5.0 };
+        Integer arr2[] = { 1, 2, 3, 4, 5 };
+        Student<Double> s1 = new Student<Double>(arr);
+        Student<Integer> s2 = new Student<Integer>(arr2);
+
+        System.out.println(s1.compareMarks(s2));
+    }
+}
